@@ -8,11 +8,13 @@
         "build": "astro build",
         "build:remote": "astro build --remote",
         "astro": "astro",
-        "start": "node ./dist/server/entry.mjs"
+        "start": "node ./dist/server/entry.mjs",
+        "db:push": "astro db push --remote",
+        "db:seed": "astro db execute ./db/seed.ts --remote"
     },
     "dependencies": {
         "@astrojs/db": "^0.14.6",
-        "@astrojs/node": "^9.0.2",
-        "astro": "^5.2.3"
+        "@astrojs/node": "^9.1.0",
+        "astro": "^5.3.0"
     }
 }
