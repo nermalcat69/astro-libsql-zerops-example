@@ -13,6 +13,7 @@ services:
           maxDisk: 5
       minContainers: 1
       maxContainers: 1
+      buildFromGit: https://github.com/zeropsio/libsql
     - hostname: frontend
       type: nodejs@22
       verticalAutoscaling:
