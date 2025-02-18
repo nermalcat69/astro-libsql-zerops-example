@@ -15,8 +15,8 @@ services:
       type: nodejs@22
       enableSubdomainAccess: true
       buildFromGit: https://github.com/dallyh/astro-libsql-zerops-example
-      priority: 3
+      priority: 1
     - hostname: dbstorage
       type: object-storage
       objectStorageSize: 2
-      priority: 1
+      priority: 3
