@@ -3,7 +3,7 @@ zerops:
       build:
           base: nodejs@22
           envVariables:
-              ASTRO_DB_REMOTE_URL: ${libsqld_zeropsSubdomain}
+              ASTRO_DB_REMOTE_URL: ${RUNTIME_ASTRO_DB_REMOTE_URL}
           buildCommands:
               - npm install
               - npm run build:remote
@@ -22,5 +22,5 @@ zerops:
                 httpSupport: true
           envVariables:
               HOST: 0.0.0.0
-              ASTRO_DB_REMOTE_URL: ${libsqld_zeropsSubdomain}
+              ASTRO_DB_REMOTE_URL: http://libsqld:8080
           start: npm run start
