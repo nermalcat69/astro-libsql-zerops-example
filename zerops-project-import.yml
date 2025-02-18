@@ -9,13 +9,14 @@ services:
       minContainers: 1
       maxContainers: 1
       enableSubdomainAccess: true
-      priority: 10
+      priority: 2
       buildFromGit: https://github.com/zeropsio/libsql
     - hostname: frontend
       type: nodejs@22
       enableSubdomainAccess: true
       buildFromGit: https://github.com/dallyh/astro-libsql-zerops-example
+      priority: 3
     - hostname: dbstorage
       type: object-storage
       objectStorageSize: 2
-      priority: 12
+      priority: 1
