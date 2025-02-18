@@ -7,7 +7,6 @@ services:
           maxRam: 1
           maxDisk: 5
       maxContainers: 1
-      enableSubdomainAccess: true
       priority: 2
       buildFromGit: https://github.com/zeropsio/libsql
     - hostname: frontend
