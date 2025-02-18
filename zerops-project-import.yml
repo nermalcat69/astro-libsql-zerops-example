@@ -1,21 +1,17 @@
 project:
     name: astro-libsql
-    corePackage: LIGHT
 services:
     - hostname: libsqld
       type: ubuntu@24.04
       verticalAutoscaling:
-          cpu: 1
-          cpuMode: SHARED
-          minRam: 0.25
           maxRam: 1
-          minDisk: 1
           maxDisk: 5
       minContainers: 1
       maxContainers: 1
       buildFromGit: https://github.com/zeropsio/libsql
     - hostname: frontend
       type: nodejs@22
+      buildFromGit: https://github.com/dallyh/astro-libsql-zerops-example
     - hostname: dbstorage
       type: object-storage
       objectStorageSize: 2
