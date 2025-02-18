@@ -6,7 +6,6 @@ services:
       verticalAutoscaling:
           maxRam: 1
           maxDisk: 5
-      minContainers: 1
       maxContainers: 1
       enableSubdomainAccess: true
       priority: 2
